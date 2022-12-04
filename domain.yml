@@ -1,0 +1,90 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - stockvalue
+  - stock
+  - forex
+  - forex_again
+
+entities:
+- company
+- money
+- from_currency
+- to_currency
+
+slots:
+  company:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company
+
+  to_currency:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: to_currency
+
+  money:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: money
+
+  from_currency:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: from_currency
+     
+ 
+
+actions:
+  - action_price
+  - action_convert_forex
+  - action_convert_forex_again
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+
+  utter_company:
+  - text: "Which company do want to check for."
+
+  utter_price:
+  - text: "The price is {value}"
+
+  utter_forex:
+  - text: "The price is {finalvalue}"
+
+  utter_forex_again:
+  - text: "The price is {nextvalue}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
