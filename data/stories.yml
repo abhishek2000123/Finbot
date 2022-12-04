@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: getprice
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: stockvalue
+    entities:
+      - company
+  - action: action_price
+
+- story: getforex
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: forex
+    entities:
+      - money
+      - from_currency
+      - to_currency
+  - action: action_convert_forex
+
+- story: getforexagain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: forex
+    entities:
+      - money
+      - from_currency
+      - to_currency
+  - action: action_convert_forex
+  - intent: forex_again
+    entities:
+      - to_currency    
+  - action: action_convert_forex_again
