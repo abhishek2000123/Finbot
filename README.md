@@ -48,3 +48,27 @@ If the user says no
 User input->No
 Bot:-The Relative Strength Index (RSI) metric for Walmart stock is 44.11
 ```
+
+Get to know about the company before buying the stock
+
+User input:-What does this company do
+
+```sh
+bot:-America's largest retailer by sales, Walmart operated over 10,500 stores under 46 banners at the end of fiscal 2022, selling a variety of general merchandise and grocery items. Its home market accounted for 82% of sales in fiscal 2022, with Mexico and Central America (6%) and Canada (4%) its largest external markets. In the United States at the namesake banner, around 56% of sales come from grocery, 32% from general merchandise, and 11% from health and wellness items. The company operates several e-commerce properties apart from its eponymous site, including Flipkart and shoes.com (it also owns a roughly 10% stake in Chinese online retailer JD.com). Combined, e-commerce accounted for about 13% of fiscal 2022 sales.
+```
+
+Buy the stock and add it to portfolio
+
+```sh
+User input:-I want to buy this stock
+
+Bot:-How much stock would you like to buy
+
+User input:-23
+
+Bot:-Would you like to confirm the purchase of 23 stocks of Walmart
+
+User:-Yes
+
+Bot:-The transaction has been logged
+```
