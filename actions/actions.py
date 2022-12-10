@@ -460,7 +460,7 @@ class DbQueryingMethods:
         """
         cur = conn.cursor()
         cur.execute(f'''SELECT * FROM portfolio
-                    WHERE stock_name="{comp}"''')
+                    WHERE UPPER(stock_name)=UPPER("{comp}")''')
 
         # return an array
         rows = cur.fetchall()
