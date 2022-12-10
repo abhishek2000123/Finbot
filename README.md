@@ -9,7 +9,7 @@ SJSU ID-016683186
 
 Chatbot deployed in Slack
 
-## Converstion flow
+## Conversation flow
 
 User input-> Hi
 
