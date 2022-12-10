@@ -4,9 +4,9 @@ CMPE 252 Final Rasa Project
 Abhishek Sathyanarayanan
 SJSU ID-016683186
 
-###Converstion flow
+##Converstion flow
 Asking stock price
- User input-> Hi
+User input-> Hi
  
 Hi My name is Finbot.Your companion and partner in the financial world.I can perform the following operations
 - Get price of stock
