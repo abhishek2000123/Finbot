@@ -85,7 +85,23 @@ Bot:-The transaction has been logged
 User input:-Show me my portfolio
 
 ```sh
-Walmart,WMT,23
+bot:-Walmart,WMT,23
+```
+
+### Get the cost of your total invesment in a compnay with realtime values
+
+user input:-What is the cost of my invesment in Walmart
+
+```sh
+Bot:-The amount you have invested is 3342.13 USD
+```
+
+### Find the number of stocks that you have bought in a paticular company
+
+user input:-How many stocks of walmart do i hold
+
+```sh
+Bot:-The amount of stock you hold is 23
 ```
 
 ### Perform Forex Conversions
