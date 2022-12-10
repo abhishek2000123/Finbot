@@ -5,7 +5,9 @@ Abhishek Sathyanarayanan
 SJSU ID-016683186
 
 ##Converstion flow
+
 Asking stock price
+
 User input-> Hi
  
 Hi My name is Finbot.Your companion and partner in the financial world.I can perform the following operations
