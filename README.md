@@ -19,7 +19,7 @@ bot:-  Hi My name is Finbot.Your companion and partner in the financial world.I 
        - Perform forex conversion
        - Check portfolio
 ```
-Asking Stock price of a company
+### Asking Stock price of a company
 
 User input->What is the stock price of Walmart
 
