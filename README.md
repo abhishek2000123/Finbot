@@ -88,9 +88,9 @@ User input:-Show me my portfolio
 bot:-Walmart,WMT,23
 ```
 
-### Get the cost of your total invesment in a compnay with realtime values
+### Get the cost of your total investment in a compnay with realtime values
 
-user input:-What is the cost of my invesment in Walmart
+user input:-What is the cost of my investment in Walmart
 
 ```sh
 Bot:-The amount you have invested is 3342.13 USD
