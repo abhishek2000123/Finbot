@@ -88,7 +88,7 @@ User input:-Show me my portfolio
 Walmart,WMT,23
 ```
 
-##Perform Forex Conversions
+### Perform Forex Conversions
 
 User input:-Convert 100 USD to INR
 
