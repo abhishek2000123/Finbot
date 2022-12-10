@@ -98,15 +98,170 @@ nlu:
     - Can you tell me the stock price of [Microsoft](company)
     - What is the stock price of [Google](company:Google)
     - Can you tell me the stock price of [Google](company)     
+    - What is the stock price of [Lenovo](company)
+    - Can you tell me the stock price of [Lenovo](company)
+    - What is the stock price of [Google](company)
+    - Can you tell me the stock price of [Google](company)
+    - What is the stock price of [Tesla](company)
+    - Can you tell me the stock price of [Tesla](company)
+    - What is the stock price of [Walmart](company)
+    - Can you tell me the stock price of [Walmart](company)   
     
 - intent: forex
   examples: |
     - Convert [1000](money) [USD](from_currency) to [JPY](to_currency)
     - Convert [300](money) [Euro](from_currency) to [USD](to_currency)
-    -Convert [1000](money) [GBP](from_currency) to [JPY](to_currency)
+    - Convert [1000](money) [GBP](from_currency) to [JPY](to_currency)
+    - Convert [456](money) [USD](from_currency) to [INR](to_currency)
 
 - intent: forex_again
   examples: |
-    - Convert it to (INR)[to_currency]
-    - Convert it to (Euro)[to_currency]
-    - Convert it to (GBP)[to_currency]
+    - Convert it to [INR](to_currency)
+    - Convert it to [Euro](to_currency)
+    - Convert it to [GBP](to_currency)
+    - Convert it to [JPY](to_currency)
+    - Convert it to [CLP](to_currency)
+    - Convert it to [CZK](to_currency)
+    - Convert it to [EGP](to_currency)
+
+
+- intent: testdb
+  examples: |
+    - lets test that db
+    - test the db
+    - db test
+
+- intent: add_stock
+  examples: |
+    - Buy [10](number_stocks) stocks of [Microsoft](company)
+    - Buy [100](number_stocks) stocks of [Google](company)
+    - Buy [250](number_stocks) stocks of [IBM](company)
+    - Buy [2689](number_stocks) stocks of [Apple](company)
+    - Buy [300](number_stocks) stocks of [Apple](company)
+    - Buy [756](number_stocks) stocks of [Google](company)
+
+- intent: numberstockentry
+  examples: |
+    - Buy [10](number_stocks) stocks
+    - Buy [2000](number_stocks) stocks
+    - Buy [1234](number_stocks) stocks
+    - Buy [56](number_stocks) stocks
+
+- intent: telltotal
+  examples: |
+    - What is the the total value of my assets
+    - Tell me the total value of my assets
+    - the total value of my assets
+   
+- intent: stockhold
+  examples: |
+    - How much [Microsoft](company) stock do I hold
+    - How much [IBM](company) stock do I have
+    - How much [Walmart](company) stock do I have
+    - What is the amount of [Microsoft](company) stock do i hold
+    - What is the amount of [IBM](company) stock do i hold
+    - What is the amount of [Tesla](company) stock do i hold
+    - How many stocks of [Walmart](company) do i own
+    - How many stocks of [IBM](company) do i own
+    - How many stocks of [Microsoft](company) do i own
+
+- intent: askweather
+  examples: |
+    - What is the weather today
+    - How is the weather today
+    - What is the temperature outside
+
+- intent: totalinvesment
+  examples: |
+    - What is the total cost of my invesment in [Microsoft](company)
+    - What is the total cost of my invesment in [Tesla](company)
+    - What is the total cost of my invesment in [IBM](company)
+
+- intent: getportfolio
+  examples: |
+    - Show me my portfolio
+    - What stocks do i presently hold
+
+- intent: buystock
+  examples: |
+    - Buy stock in [IBM](company)
+    - Buy stock in [Microsoft](company)
+    - Buy stock in [Tesla](company)
+    - I want to buy stock in [Microsoft](company)
+    - I want to buy stock in [IBM](company)
+    - I want to buy stock in [Tesla](company)
+   
+
+- intent: statenumber
+  examples: |
+   - [10](number_stocks)
+   - [256](number_stocks)
+   - [356](number_stocks)
+
+- intent: give_confirmation
+  examples: |
+   - [Yes](confirm)
+   - [No](confirm)
+   - [no](confirm)
+   - [yes](confirm)
+   
+
+- intent: buythisstock
+  examples: |
+   - I would like to buy this stock
+   - I would like to buy shares in this company
+  
+- intent: telldesc
+  examples: |
+   - What does this company do
+   - Give me a description on the company
+
+- intent: metrics
+  examples: |
+   - Give me the  Relative Strength Index for this stock
+   - I want to see the Relative Strength Index for the stock
+   - Give me the  RSI for this stock
+   - I want to see the RSI for the stock
+   - What is the RSI for the stock
+   - What is the Relative Strength Index for the stock
+
+- intent: givemetric
+  examples: |
+   - I want to see technical indicators for the stock
+   - Give me some techical indicators for the stock
+
+- intent: themetric
+  examples: |
+   - What is the Relative Strength Index for [IBM](company)
+   - What is the Relative Strength Index for [Tesla](company)
+   - What is the Relative Strength Index for [Microsoft](company)
+   - What is the Relative Strength Index for [Apple](company) 
+   - What is the Relative Strength Index for [Costco](company)
+   - What is the Relative Strength Index of [IBM](company)
+   - What is the Relative Strength Index of [Tesla](company)
+   - What is the Relative Strength Index of [Microsoft](company)
+   - What is the Relative Strength Index of [Apple](company) 
+   - What is the Relative Strength Index of [Costco](company)
+   - What is the RSI for [IBM](company)
+   - What is the RSI Index for [Tesla](company)
+   - What is the RSI for [Microsoft](company)
+   - What is the RSI for [Apple](company) 
+   - What is the RSI for [Costco](company)
+   - What is the RSI of [IBM](company)
+   - What is the RSI of [Tesla](company)
+   - What is the RSI of [Microsoft](company)
+   - What is the RSI of [Apple](company) 
+   - What is the RSI of [Costco](company)
+
+
+   
+- intent: metric_confirmation
+  examples: |
+   - [Yes](confirm)
+   - [No](confirm)
+   - [no](confirm)
+   - [yes](confirm)
+
+
+
+  

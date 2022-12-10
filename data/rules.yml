@@ -11,3 +11,53 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: findtotal
+  steps:
+  - intent: telltotal
+  - action: action_find_total_assets
+
+- rule: totalamount
+  steps:
+  - intent: stockhold
+    entities:
+      - company
+  - action: action_find_number_stock
+
+- rule: get the stock amount
+  steps:
+  - intent: stockvalue
+    entities:
+      - company
+  - action: action_price
+
+- rule: ask_weather
+  steps:
+  - intent: askweather
+  - action: action_get_weather
+
+- rule: getinveament
+  steps:
+  - intent: totalinvesment
+  - action: action_find_total_value
+
+- rule: showportfolio
+  steps:
+  - intent: getportfolio
+  - action: action_show_portfolio
+
+- rule: hi
+  steps:
+  - intent: greet
+  - action: utter_list
+
+- rule: desc
+  steps:
+  - intent: telldesc
+  - action: action_get_description
+
+
+
+
+
+

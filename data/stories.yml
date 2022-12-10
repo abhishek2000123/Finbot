@@ -2,37 +2,24 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: askstockprice
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: buystock
+    entities:
+      - company
+  - action: utter_how_much 
+  - intent: statenumber
+    entities:
+      - number_stocks
+  - action: action_confirmation
+  - intent: give_confirmation
+    entities:
+      - confirm
+  - action: action_insert_number_stock
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
+  
 - story: getprice
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: stockvalue
     entities:
       - company
@@ -40,8 +27,6 @@ stories:
 
 - story: getforex
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: forex
     entities:
       - money
@@ -51,8 +36,6 @@ stories:
 
 - story: getforexagain
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: forex
     entities:
       - money
@@ -63,3 +46,62 @@ stories:
     entities:
       - to_currency    
   - action: action_convert_forex_again
+
+- story:  addstock
+  steps:
+  - intent: add_stock
+    entities:
+      - number_stocks
+      - company
+
+  - action: action_insert_stock
+
+
+
+- story: multistockinsert
+  steps:
+  - intent: stockvalue
+    entities:
+      - company
+  - action: action_price
+  - intent: buythisstock
+  - action: utter_how_much 
+  - intent: statenumber
+    entities:
+      - number_stocks
+  - action: action_confirmation
+  - intent: give_confirmation
+    entities:
+      - confirm
+  - action: action_insert_number_stock
+
+- story: getmetric
+  steps:
+  - intent: givemetric
+  - action: utter_metric_confirm
+  - intent: give_confirmation
+    entities:
+      - confirm
+  - action: action_get_metric
+
+- story: getthemetric
+  steps:
+  - intent: themetric
+    entities:
+      - company
+  - action: utter_metric_confirm
+  - intent: metric_confirmation
+    entities:
+      - confirm
+  - action: action_get_metric
+
+
+- story: newgetmetric
+  steps:
+  - intent: metrics
+  - action: utter_metric_confirm
+  - intent: give_confirmation
+    entities:
+      - confirm
+  - action: action_get_metric
+

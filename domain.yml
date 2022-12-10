@@ -12,14 +12,41 @@ intents:
   - stock
   - forex
   - forex_again
+  - testdb
+  - add_stock
+  - numberstockentry
+  - telltotal
+  - stockhold
+  - askweather
+  - totalinvesment
+  - getportfolio
+  - buystock
+  - statenumber
+  - give_confirmation
+  - buythisstock
+  - telldesc
+  - metrics
+  - givemetric
+  - themetric
+  - metric_confirmation
+
 
 entities:
 - company
 - money
 - from_currency
 - to_currency
+- number_stocks
+- confirm
+
 
 slots:
+  confirm:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: confirm
+
   company:
     type: text
     mappings:
@@ -38,6 +65,12 @@ slots:
     - type: from_entity
       entity: money
 
+  number_stocks:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: number_stocks
+
   from_currency:
     type: text
     mappings:
@@ -50,6 +83,16 @@ actions:
   - action_price
   - action_convert_forex
   - action_convert_forex_again
+  - action_insert_stock
+  - action_insert_number_stock
+  - action_find_total_assets
+  - action_find_number_stock
+  - action_get_weather
+  - action_find_total_value
+  - action_show_portfolio
+  - action_confirmation
+  - action_get_description
+  - action_get_metric
 
 responses:
   utter_greet:
@@ -79,12 +122,67 @@ responses:
   utter_price:
   - text: "The price is {value}"
 
+  
+
+  
+     
+
+  utter_list:
+  - text: "Hi My name is Finbot.Your companion and partner in the financial world.I can perform the following operations\n\n - Get price of stock\n\n - Add stock to portfolio\n\n - Get financial indicators for a stock\n\n - Perform forex conversions\n\n - Check portfolio"
+
+
+    
+
+
+
   utter_forex:
   - text: "The price is {finalvalue}"
 
   utter_forex_again:
   - text: "The price is {nextvalue}"
 
+  utter_db_test:
+  - text: "{test}"
+
+  utter_confirmation:
+  - text: "The transaction has been logged"
+
+  utter_sum:
+  - text: "The value of your assets is {sum} USD"
+
+  utter_stock_amount:
+  - text: "The amount of stock you hold is {amount}"
+
+  utter_weather:
+  - text: "The temperature is {weather} degrees"
+
+  utter_total_sum:
+  - text: "The amount you have invested is {sum} USD"
+
+  utter_buy_stock:
+  - text: "What stock would you like to buy"
+
+  utter_how_much:
+  - text: "How much stock would you like to buy"
+
+  utter_confirmation_transaction:
+  - text: "Would you like to confirm the purchase of {number} stocks of {company} "
+
+  utter_not_added:
+  - text: "Transcation was canceled"
+
+  utter_desc:
+  - text: "{desc}"
+
+  utter_metric:
+  - text: "The Relative Strength Index (RSI) metric for {company} stock is {rsi}"
+   
+  utter_def_metric:
+  - text: "The relative strength index (RSI) measures the price momentum of a stock or other security. The basic idea behind the RSI is to measure how quickly traders are bidding the price of the security up or down. The RSI plots this result on a scale of 0 to 100.Readings below 30 generally indicate that the stock is oversold, while readings above 70 indicate that it is overbought. Traders will often place this RSI chart below the price chart for the security, so they can compare its recent momentum against its market price."
+   
+  utter_metric_confirm:
+  - text: "I can provide the Relative strength Index Measure of the stock would you like me to provide a brief overview of the metric"
+
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
