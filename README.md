@@ -6,8 +6,6 @@ SJSU ID-016683186
 
 ## Converstion flow
 
-Asking stock price
-
 User input-> Hi
 
 ```sh
@@ -17,4 +15,11 @@ bot:-  Hi My name is Finbot.Your companion and partner in the financial world.I 
        - Get financial indicators for a stock
        - Perform forex conversion
        - Check portfolio
+```
+Asking Stock price of a company
+
+User input->What is the stock price of Walmart
+
+```sh
+bot:-What is the stock price of Walmart
 ```
